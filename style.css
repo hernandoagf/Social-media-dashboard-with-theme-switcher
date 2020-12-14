@@ -4,6 +4,7 @@
 	--dark-mode-white-text: hsl(0, 0%, 100%);
 	--dark-mode-blue-text: hsl(228, 34%, 66%);
 	--dark-mode-card-bg: hsl(228, 28%, 20%);
+	--dark-mode-card-bg-hover: hsl(228, 28%, 28%);
 	--facebook-color: hsl(208, 92%, 53%);
 	--twitter-color: hsl(203, 89%, 53%);
 	--instagram-color: linear-gradient(
@@ -67,6 +68,11 @@ body {
 	margin: 10px 0;
 	padding: 15px;
 	border-radius: 5px;
+	transition: background-color 0.1s ease-in;
+}
+
+.card:hover {
+	background-color: var(--dark-mode-card-bg-hover);
 }
 
 .main-card {
@@ -155,7 +161,49 @@ body {
 }
 
 .overview-card {
-	height: 110px;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 22px 30px;
+}
+
+.card-first-line,
+.card-second-line {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-first-line p {
+	font-weight: 700;
+	font-size: 0.8rem;
+}
+
+.card-second-line {
+	align-items: flex-end;
+}
+
+.card-second-line h3 {
+	font-size: 1.8rem;
+}
+
+.statistics {
+	margin-left: 5px;
+	font-size: 0.7rem;
+	font-weight: 700;
+}
+
+.statistics-up {
+	color: var(--green-text);
+}
+
+.statistics-down {
+	color: var(--red-text);
+}
+
+.count-container {
+	display: flex;
+	align-items: center;
 }
 
 /* Utilities */
